@@ -47,7 +47,7 @@ services:
       - '0.0.0.0:443:443'
 
   redis:
-    build: true
+    image: docker.io/redis:6
 
 
   nginx:

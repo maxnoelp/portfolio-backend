@@ -37,7 +37,7 @@ services:
     build:
       context: .
       dockerfile: ./compose/production/traefik/Dockerfile
-      build: truek
+      build: true
     depends_on:
       - django
     volumes:

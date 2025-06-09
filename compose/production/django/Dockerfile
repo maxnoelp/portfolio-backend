@@ -78,6 +78,10 @@ RUN mkdir -p ${APP_HOME}/api/media
 # make django owner of the WORKDIR directory as well.
 RUN chown -R django:django ${APP_HOME}
 
+# ensure staticfiles directory exists and is writable
+RUN mkdir -p ${APP_HOME}/staticfiles && \
+    chown -R django:django ${APP_HOME}/staticfiles
+
 USER django
 
 RUN DATABASE_URL="" \

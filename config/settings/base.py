@@ -100,8 +100,8 @@ ACCOUNT_SIGNUP_FIELDS = {
     "password2": {"required": True},
 }
 ACCOUNT_LOGIN_METHODS = {"username", "email"}
-ACCOUNT_EMAIL_VERIFICATION = "mandatory"
-ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_CONFIRM_EMAIL_ON_GET = False
 DEFAULT_FROM_EMAIL = "noreply@prinz-code.de"
 
 

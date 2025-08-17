@@ -5,7 +5,11 @@ from tinymce.models import HTMLField
 
 class Skills(models.Model):
     name = models.CharField(_("Name"), max_length=100)
-    image = models.ImageField(_("Bild"), upload_to="portfolio/images/")
+    image = models.ImageField(
+        _("Bild"),
+        upload_to="portfolio/images/",
+        blank=True,
+    )
 
     def __str__(self):
         return self.name
@@ -23,6 +27,7 @@ class Projects(models.Model):
     )
     gh = models.URLField(_("Github Repo"), blank=True)
     live = models.URLField(_("Live Demo"), blank=True)
+    in_progress = models.BooleanField(_("In Arbeit"), default=False)
 
     def __str__(self):
         return self.title

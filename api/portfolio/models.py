@@ -5,7 +5,7 @@ from tinymce.models import HTMLField
 
 class Skills(models.Model):
     name = models.CharField(_("Name"), max_length=100)
-    image = models.ImageField(
+    image = models.FileField(
         _("Bild"),
         upload_to="portfolio/images/",
         blank=True,

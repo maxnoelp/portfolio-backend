@@ -329,8 +329,11 @@ SPECTACULAR_SETTINGS = {
 # Your stuff...
 # ------------------------------------------------------------------------------
 CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "https://prinz-code.de",
-    "https://www.prinz-code.de",
-]
+CORS_ALLOWED_ORIGINS = env.list(
+    "DJANGO_CORS_ALLOWED_ORIGINS",
+    default=[
+        "http://localhost:5173",
+        "https://prinz-code.de",
+        "https://www.prinz-code.de",
+    ],
+)
